@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0"
+      style="-fx-background-color: #8d99ae;        -fx-border-style: solid;"
+      xmlns="http://javafx.com/javafx/17.0.2-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.calmperson.simplep2pvoip.controller.ClientMenuController">
+    <children>
+        <FlowPane prefWrapLength="0.0">
+            <children>
+                <Label text="Username:" />
+                <TextField fx:id="username" text="SomeUser" />
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin>
+        </FlowPane>
+        <FlowPane prefWrapLength="0.0">
+            <children>
+                <Label text="Port:" />
+                <TextField fx:id="serverPort" text="43" />
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin>
+        </FlowPane>
+
+        <FlowPane prefWrapLength="0.0">
+            <children>
+                <Label text="Server address:" />
+                <TextField fx:id="serverAddress" text="localhost" />
+            </children>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin>
+        </FlowPane>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+         <children>
+            <Button fx:id="connectButton" onAction="#onConnectButtonClick" mnemonicParsing="false" text="Connect" />
+            <Button fx:id="disconnectButton" onAction="#onDisconnectButtonClick" mnemonicParsing="false" text="Disconnect" />
+         </children>
+      </HBox>
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+
+</VBox>

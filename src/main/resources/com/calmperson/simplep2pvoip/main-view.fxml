@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" style="-fx-background-color: #8d99ae;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.calmperson.simplep2pvoip.controller.MainController">
+   <ToolBar minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #ef233c;">
+     <items>
+       <Button fx:id="clientMenuButton" mnemonicParsing="false" style="-fx-background-color: none;" text="Client" />
+         <Button fx:id="serverMenuButton" mnemonicParsing="false" style="-fx-background-color: none;" text="Server" />
+         <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="3.0">
+            <children>
+               <Label text="Ping:" />
+               <Label fx:id="pingValue" text="0" />
+               <Label text="ms" />
+            </children>
+         </HBox>
+     </items>
+   </ToolBar>
+   <HBox alignment="TOP_CENTER" fillHeight="false" spacing="10.0">
+      <children>
+         <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+            <children>
+               <Label text="Chat">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <ScrollPane minHeight="-Infinity" minWidth="-Infinity">
+                  <content>
+                     <ListView fx:id="chat" style="-fx-background-color: #edf2f4;" />
+                  </content>
+               </ScrollPane>
+               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <children>
+                     <TextField fx:id="message" minHeight="-Infinity" minWidth="195.0" style="-fx-background-color: #edf2f4;" />
+                     <Button fx:id="sendMessage" mnemonicParsing="false" onAction="#onSendMessageButtonClick" text="Send" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+</VBox>

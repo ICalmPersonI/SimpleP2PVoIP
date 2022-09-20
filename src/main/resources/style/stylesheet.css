@@ -1,0 +1,8 @@
+/* CSS */
+.button {
+  -fx-background-color: #555555;
+  -fx-border: none;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-display: inline-block;
+}
